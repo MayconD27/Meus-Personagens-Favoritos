@@ -32,7 +32,7 @@ background-color: #000;
 
 
 .card{
-    width: 70vw;
+    width: 90vw;
     height: 400px;
     transform-style: preserve-3d;
     transition: all 0.5s ease;
@@ -49,7 +49,7 @@ background-color: #000;
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 2%;
+    border-radius: 20px;
     background: linear-gradient(rgb(2, 1, 59),rgb(24, 10, 124));
     border: rgba(17, 180, 255, 0.349) 2x solid ;
     box-shadow: 0px  0px 10px rgb(17, 180, 255);
@@ -112,7 +112,13 @@ p{
     transition: .5s;
 }
 [data-anime="down"]{
-    transform: translate3d(0px, 50px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+}
+[data-anime="left"]{
+    transform: translate3d(-50px, 0px, 0px);
+}
+[data-anime="right"]{
+    transform: translate3d(50px, 0px, 0px);
 }
 
 [data-anime].anime{
@@ -136,4 +142,20 @@ h1.anime{
     max-width: 400px;
     left: 1vw;
     top: -20vh;
+}
+.container_cards{
+    display: flex;
+    width: 90%;
+    gap: 5px;
+    margin: 100px auto;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.card_box{
+    min-width: 380px;
+    width: 48%;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin:  auto;
 }

@@ -1,0 +1,139 @@
+header{
+    width: 100vw;
+    height: 10vh;
+    background-color: rgb(5, 1, 20);
+}
+body{
+margin: 0;
+overflow-x: hidden;
+background-color: #000;
+}
+.inicio{
+    background-image: url("../img/my.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    width: 100vw;
+
+    height: 100vh;
+}
+.conteudo{
+    width: 100vw;
+    margin: -10vh auto;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: arial;
+    border-radius: 2%;
+      
+
+}
+
+
+.card{
+    width: 70vw;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    font-family: arial;
+    border-radius: 2%;
+    cursor: pointer;
+    margin: 0 auto;
+    position: relative;
+    background-color: transparent;
+}
+.front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 2%;
+    background: linear-gradient(rgb(2, 1, 59),rgb(24, 10, 124));
+    border: rgba(17, 180, 255, 0.349) 2x solid ;
+    box-shadow: 0px  0px 10px rgb(17, 180, 255);
+}
+.back{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+    border-radius: 2%;
+    background-color: #fff;
+}
+
+.card.rodar{
+    transform: rotateY(180deg);
+}
+
+
+
+
+h1{
+    color: #fff;
+    font-size: 5vw;
+    position: absolute;
+    top:30%;
+    margin-left: 5px;
+    left: 20px;
+    opacity: 0;
+    transition: 1s;
+    transform: translate3d(-300px, 0px, 0px);
+}
+h3{
+    color: #11b4ff;
+    margin-top:10%;
+    padding-right: 10px;
+    width: 100%;
+    text-align: right;
+    font-size: 40px;
+}
+h4{
+    color: rgba(17, 180, 255, 0.5);
+    margin-top:-5px;
+    padding-right: 10px;
+    width: 100%;
+    text-align: right;
+    font-size: 15px;
+}
+hr{
+    padding: 0;
+    border: 1px solid rgb(32, 0, 146);
+}
+p{
+    color: rgb(41, 40, 40);
+    width: 300px;
+
+}
+[data-anime]{
+    opacity: 0;
+    transition: .5s;
+}
+[data-anime="down"]{
+    transform: translate3d(0px, 50px, 0px);
+}
+
+[data-anime].anime{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+nav{
+    position: relative;
+}
+
+
+h1.anime{
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.conteudo img{
+    position: absolute;
+    z-index: 99999;
+    width: 40vw;
+    max-width: 400px;
+    left: 1vw;
+    top: -20vh;
+}
